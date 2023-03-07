@@ -5,5 +5,10 @@
 
 version: 2
 updates:
-- package-ecosystem: "maven" # See documentation for possible values
-  directory: "/tools/deploy/module3" # Location of package manifests
+  # Maintain dependencies for GitHub Actions
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+  - package-ecosystem: "maven" # See documentation for possible values
+    directory: "/tools/deploy/module3" # Location of package manifests
